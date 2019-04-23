@@ -1,0 +1,43 @@
+For x64 Windows change to:
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin" 
+
+Создание пустого репозитория в существующей директории:
+$ git init
+
+Клонирование репозитория
+git clone [url]. ( например $ git clone https://github.com/khasang-incubator/projectmanagement)
+
+доабление в пустой репозитьрий 
+git add .
+
+Основной инструмент, используемый для определения, какие файлы в каком состоянии находятся ^
+git status
+
+Сокращенный вывод статуса
+git status -s или git status --short
+
+вам хочется знать, что конкретно поменялось,
+ а не только какие файлы были изменены — вы можете использовать команду
+
+git diff
+
+Если вы хотите посмотреть, что вы проиндексировали и 
+что войдёт в следующий коммит, вы можете выполнить 
+
+git diff --staged  (Эта команда сравнивает ваши индексированные изменения с последним коммитом)
+
+
+Вы можете набрать свой комментарий к коммиту
+ в командной строке вместе с командой commit указав
+ его после параметра -m, как в следующем примере:
+
+$ git commit -m "Story 182: Fix benchmarks for speed"
+
+автоматическое индексирование изменений и создание еще одного коммита
+$ git commit -a -m 'added new benchmarks'
+
+подключение удаленного репозитория:
+$ git remote add origin https://github.com/SergNosov/springdp.git
+
+Загрузка локального репозитория на удаленный:
+$ git push origin master   (после этой команды должно спросить логин/пароль)
